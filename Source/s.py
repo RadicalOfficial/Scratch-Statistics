@@ -6,10 +6,10 @@ import json
 
 s = os.environ['s']
 
-session = scratch3.Session(s, username="YOURNAMEHERE")
-conn = session.connect_cloud("Enter your project")
+session = scratch3.Session(s, username="Knightbot63")
+conn = session.connect_cloud("801375256")
 
-cookie = {"Username": "YOUR NAME HERE", "SessionID": s}
+cookie = {"Username": "Knightbot63", "SessionID": s}
 
 login = scratchconnect.ScratchConnect(online_ide_cookie=cookie)
 
