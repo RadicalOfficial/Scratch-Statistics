@@ -3,7 +3,6 @@ import requests
 import scratchattach as scratch3
 import scratchconnect
 import json
-import Logging as logging
 
 s = os.environ['s']
 
@@ -25,7 +24,6 @@ def seeifonline() -> str:
 @client.request
 def statistics(user: str) -> list:
   print(f"Getting {user}")
-  logging.log(f"Getting statistics for {user}")
   user = login.connect_user(user)
   appending = []
   appending.append(user.joined_date())
