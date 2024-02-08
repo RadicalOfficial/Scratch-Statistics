@@ -9,6 +9,10 @@ s = os.environ['s']
 session = scratch3.Session(s, username="Knightbot63")
 conn = session.connect_cloud("801375256")
 
+try:
+  print(session.email)
+except Exception as e:
+  print("Can't print email...")
 cookie = {"Username": "Knightbot63", "SessionID": s}
 
 login = scratchconnect.ScratchConnect(online_ide_cookie=cookie)
