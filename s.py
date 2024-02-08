@@ -15,7 +15,7 @@ except Exception as e:
   print("Can't print email...")
 cookie = {"Username": "Knightbot63", "SessionID": s}
 
-login = scratchconnect.ScratchConnect(online_ide_cookie=cookie)
+# login = scratchconnect.ScratchConnect(online_ide_cookie=cookie)
 
 client = scratch3.CloudRequests(conn)
 
@@ -28,14 +28,21 @@ def seeifonline() -> str:
 @client.request
 def statistics(user: str) -> list:
   print(f"Getting {user}")
-  user = login.connect_user(user)
+  '''user = login.connect_user(user)
   appending = []
   appending.append(user.joined_date())
   appending.append(user.id())
-  appending.append("following and follower count not provided") # Scratch API might provide them
+  appending.append("following and follower count not provided")
   appending.append(user.bio())
   appending.append(user.work())
-  appending.append(user.messages_count())
+  appending.append(user.messages_count())'''
+  appending = []
+  appending.append("Error")
+  appending.append(-1)
+  appending.append("following and follower count not provided")
+  appending.append("Error")
+  appending.append("Error")
+  appending.append(-1)
   print("Completed appending.")
   print(appending)
   return appending
